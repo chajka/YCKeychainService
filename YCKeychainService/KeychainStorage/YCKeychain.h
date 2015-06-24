@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Security/Security.h>
+#import "YCKeychainACL.h"
 
 @interface YCKeychain : NSObject {
+	SecKeychainRef						keychain;
+	YCKeychainACL						*accessControlList;
+
+	OSStatus							lastResult;
+	NSString							*lastResultMessage;
 }
 @end
