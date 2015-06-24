@@ -17,4 +17,5 @@
 	OSStatus							lastResult;
 	NSString							*lastResultMessage;
 }
+@property (readonly) SecKeychainRef		keychain;
 @end
