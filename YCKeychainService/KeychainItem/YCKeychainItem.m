@@ -15,6 +15,27 @@
 @synthesize inKeyChain = belongsToKeychain;
 #pragma mark - class method
 #pragma mark - constructor / destructor
+- (id) init
+{
+	self = [super init];
+	if (self)
+		lastResult = noErr;
+	
+	return self;
+}// end - (id) init
+
+- (id) initWithName:(NSString *)accountName password:(NSString *)accountPassword
+{
+	self = [super init];
+	if (self) {
+		lastResult = noErr;
+		account = [[NSString alloc] initWithString:accountName];
+		password = [[NSString alloc] initWithString:accountPassword];
+	}// end if self
+	
+	return self;
+}// end - (id) initWithName:(NSString *)accountName password:(NSString *)accountPassword
+
 #pragma mark - override
 #pragma mark - delegate
 #pragma mark - properties

@@ -23,5 +23,8 @@
 @property (readonly)	NSString			*password;
 @property (readonly)	YCKeychain			*inKeyChain;
 
+- (id) init;
+- (id) initWithName:(NSString *)accountName password:(NSString *)accountPassword;
+
 
 @end
