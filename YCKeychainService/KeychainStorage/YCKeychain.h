@@ -19,6 +19,19 @@
 	NSString							*lastResultMessage;
 }
 @property (readonly) SecKeychainRef		keychain;
+
++ (YCKeychain *) defaultKeychain;
+#if __has_feature(objc_arc)
++ (BOOL) lockAll:(NSString * __autoreleasing *)errorMessage;
+#else
++ (BOOL) lockAll:(NSString **)errorMessage;
+#endif
+#if __has_feature(objc_arc)
++ (BOOL) unlockAll:(NSString *)password error:(NSString * __autoreleasing *)errorMessage;
+#else
++ (BOOL) unlockAll:(NSString *)password error:(NSString **)errorMessage;
+#endif
+
 - (id) init;
 - (id) initWithPath:(NSString *)path password:(NSString *)password;
 

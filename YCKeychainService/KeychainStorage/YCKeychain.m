@@ -22,8 +22,66 @@ extern "C" {
 #pragma mark - synthesize properties
 @synthesize keychain;
 #pragma mark - class method
++ (YCKeychain *) defaultKeychain
+{
+	YCKeychain *keychain = [[YCKeychain alloc] init];
+#if !__has_feature(objc_arc)
+	[keychain autorelease];
+#endif
+	return keychain;
+}// end + (YCKeychain *) defaultKeychain
+
+#if __has_feature(objc_arc)
++ (BOOL) lockAll:(NSString * __autoreleasing *)errorMessage;
+#else
++ (BOOL) lockAll:(NSString **)errorMessage;
+#endif
+{
+	BOOL success = YES;
+	OSStatus result = noErr;
+	result = SecKeychainLockAll();
+	
+	// error handling
+	if (result != noErr) {
+		success = NO;
+		if (errorMessage != nil)
+			*errorMessage = errorMessageFromStatus(result);
+	}// end if remove keychain is success or not
+	
+	return success;
+}// end lockAll:(NSString **)errorMessage
+
+#if __has_feature(objc_arc)
++ (BOOL) unlockAll:(NSString *)password error:(NSString * __autoreleasing *)errorMessage
+#else
++ (BOOL) unlockAll:(NSString *)password error:(NSString **)errorMessage
+#endif
+{
+	BOOL success = YES;
+	OSStatus result = noErr;
+	UInt32 length = 0;
+	const char *pass = NULL;
+	Boolean usePassword = false;
+	
+	if (password != nil) {
+		length = (UInt32)[password length];
+		pass = [password UTF8String];
+		usePassword = true;
+	}// end if password is defined
+	result = SecKeychainUnlock(NULL, length, pass, usePassword);
+	
+	// error handling
+	if (result != noErr) {
+		success = NO;
+		if (errorMessage != nil)
+			*errorMessage = errorMessageFromStatus(result);
+		// end if copy error message
+	}// end if remove keychain is success or not
+	
+	return success;
+}// end + (BOOL) unlockAll:(NSString *)password error:(NSString **)errorMessage
+
 #pragma mark - constructor / destructor
-#pragma mark constructor
 - (id) init
 {
 	self = [super init];
