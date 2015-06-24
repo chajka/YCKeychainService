@@ -10,5 +10,5 @@
 #import "YCKeychainItem.h"
 
 @interface YCHTTPSKeychainItem : YCInternetKeychainItem
-
++ (NSArray *) usersInKeychain:(NSString *)url andPath:(NSString *)path;
 @end

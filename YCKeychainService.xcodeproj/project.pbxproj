@@ -28,6 +28,7 @@
 		C6DEB87D1B3AB4B400477ED2 /* YCInternetKeychainItemTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DEB87C1B3AB4B400477ED2 /* YCInternetKeychainItemTest.m */; };
 		C6DEB8801B3AB8D200477ED2 /* YCHTTPSKeychainItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C6DEB87E1B3AB8D200477ED2 /* YCHTTPSKeychainItem.h */; };
 		C6DEB8811B3AB8D200477ED2 /* YCHTTPSKeychainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DEB87F1B3AB8D200477ED2 /* YCHTTPSKeychainItem.m */; };
+		C6DEB8831B3ABBD400477ED2 /* YCHTTPSKeychainItemTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DEB8821B3ABBD400477ED2 /* YCHTTPSKeychainItemTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		C6DEB87C1B3AB4B400477ED2 /* YCInternetKeychainItemTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCInternetKeychainItemTest.m; sourceTree = "<group>"; };
 		C6DEB87E1B3AB8D200477ED2 /* YCHTTPSKeychainItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YCHTTPSKeychainItem.h; path = InternetKeychainItem/YCHTTPSKeychainItem.h; sourceTree = "<group>"; };
 		C6DEB87F1B3AB8D200477ED2 /* YCHTTPSKeychainItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YCHTTPSKeychainItem.m; path = InternetKeychainItem/YCHTTPSKeychainItem.m; sourceTree = "<group>"; };
+		C6DEB8821B3ABBD400477ED2 /* YCHTTPSKeychainItemTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCHTTPSKeychainItemTest.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				C6DEB87C1B3AB4B400477ED2 /* YCInternetKeychainItemTest.m */,
+				C6DEB8821B3ABBD400477ED2 /* YCHTTPSKeychainItemTest.m */,
 			);
 			name = InternetKeychainItem;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 			files = (
 				C6DEB83F1B3A66C500477ED2 /* YCKeychainServiceTests.m in Sources */,
 				C6DEB8681B3A9F8E00477ED2 /* YCKeychainStorageTest.m in Sources */,
+				C6DEB8831B3ABBD400477ED2 /* YCHTTPSKeychainItemTest.m in Sources */,
 				C6DEB87D1B3AB4B400477ED2 /* YCInternetKeychainItemTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -32,7 +32,6 @@ CFMutableDictionaryRef makeHTTPSPasswordQuery(CFStringRef url, CFStringRef path)
 	
 	status = SecItemCopyMatching(query, (CFTypeRef*)&searchResult);
 	
-	NSLog(@"%@", searchResult);
 	NSArray *users = nil;
 	if (status != noErr)
 		return users;
@@ -54,8 +53,8 @@ CFMutableDictionaryRef makeHTTPSPasswordQuery(CFStringRef url, CFStringRef path)
 	CFMutableDictionaryRef query = makeBaseQuery(kSecClassInternetPassword);
 	CFDictionaryAddValue(query, kSecClass, kSecClassInternetPassword);
 	CFDictionaryAddValue(query, kSecAttrProtocol, kSecAttrProtocolHTTPS);
-	CFDictionaryAddValue(query, kSecAttrServer, &url);
-	CFDictionaryAddValue(query, kSecAttrPath, &path);
+	CFDictionaryAddValue(query, kSecAttrServer, url);
+	CFDictionaryAddValue(query, kSecAttrPath, path);
 	
 	
 	return query;
