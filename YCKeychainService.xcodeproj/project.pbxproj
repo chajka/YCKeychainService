@@ -14,6 +14,10 @@
 		C6DEB8531B3A6DFD00477ED2 /* YCKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DEB8511B3A6DFD00477ED2 /* YCKeychain.m */; };
 		C6DEB8561B3A720000477ED2 /* YCKeychainACL.h in Headers */ = {isa = PBXBuildFile; fileRef = C6DEB8541B3A720000477ED2 /* YCKeychainACL.h */; };
 		C6DEB8571B3A720000477ED2 /* YCKeychainACL.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DEB8551B3A720000477ED2 /* YCKeychainACL.m */; };
+		C6DEB85C1B3A960600477ED2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DEB85B1B3A960600477ED2 /* Foundation.framework */; };
+		C6DEB85E1B3A961300477ED2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DEB85D1B3A961300477ED2 /* Security.framework */; };
+		C6DEB8651B3A96D300477ED2 /* CommonUtilties.h in Headers */ = {isa = PBXBuildFile; fileRef = C6DEB8631B3A96D300477ED2 /* CommonUtilties.h */; };
+		C6DEB8661B3A96D300477ED2 /* CommonUtilties.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DEB8641B3A96D300477ED2 /* CommonUtilties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +41,10 @@
 		C6DEB8511B3A6DFD00477ED2 /* YCKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YCKeychain.m; path = KeychainStorage/YCKeychain.m; sourceTree = "<group>"; };
 		C6DEB8541B3A720000477ED2 /* YCKeychainACL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YCKeychainACL.h; path = KeychainStorage/YCKeychainACL.h; sourceTree = "<group>"; };
 		C6DEB8551B3A720000477ED2 /* YCKeychainACL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YCKeychainACL.m; path = KeychainStorage/YCKeychainACL.m; sourceTree = "<group>"; };
+		C6DEB85B1B3A960600477ED2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C6DEB85D1B3A961300477ED2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		C6DEB8631B3A96D300477ED2 /* CommonUtilties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonUtilties.h; path = "Supporting Functions/CommonUtilties.h"; sourceTree = "<group>"; };
+		C6DEB8641B3A96D300477ED2 /* CommonUtilties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonUtilties.m; path = "Supporting Functions/CommonUtilties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +52,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6DEB85E1B3A961300477ED2 /* Security.framework in Frameworks */,
+				C6DEB85C1B3A960600477ED2 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +71,8 @@
 		C6DEB8221B3A66C500477ED2 = {
 			isa = PBXGroup;
 			children = (
+				C6DEB85D1B3A961300477ED2 /* Security.framework */,
+				C6DEB85B1B3A960600477ED2 /* Foundation.framework */,
 				C6DEB82E1B3A66C500477ED2 /* YCKeychainService */,
 				C6DEB83B1B3A66C500477ED2 /* YCKeychainServiceTests */,
 				C6DEB82D1B3A66C500477ED2 /* Products */,
@@ -139,6 +151,8 @@
 		C6DEB84A1B3A6ACB00477ED2 /* Supporting Functions */ = {
 			isa = PBXGroup;
 			children = (
+				C6DEB8631B3A96D300477ED2 /* CommonUtilties.h */,
+				C6DEB8641B3A96D300477ED2 /* CommonUtilties.m */,
 			);
 			name = "Supporting Functions";
 			sourceTree = "<group>";
@@ -187,6 +201,7 @@
 			files = (
 				C6DEB8521B3A6DFD00477ED2 /* YCKeychain.h in Headers */,
 				C6DEB8561B3A720000477ED2 /* YCKeychainACL.h in Headers */,
+				C6DEB8651B3A96D300477ED2 /* CommonUtilties.h in Headers */,
 				C6DEB8321B3A66C500477ED2 /* YCKeychainService.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6DEB8661B3A96D300477ED2 /* CommonUtilties.m in Sources */,
 				C6DEB8571B3A720000477ED2 /* YCKeychainACL.m in Sources */,
 				C6DEB8531B3A6DFD00477ED2 /* YCKeychain.m in Sources */,
 			);
