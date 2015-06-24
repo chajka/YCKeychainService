@@ -72,7 +72,11 @@
 			isa = PBXGroup;
 			children = (
 				C6DEB8311B3A66C500477ED2 /* YCKeychainService.h */,
+				C6DEB8481B3A6A9100477ED2 /* KeychainStorage */,
+				C6DEB8491B3A6AAA00477ED2 /* KeychainItem */,
+				C6DEB84A1B3A6ACB00477ED2 /* Supporting Functions */,
 				C6DEB82F1B3A66C500477ED2 /* Supporting Files */,
+				C6DEB84B1B3A6AE700477ED2 /* Frameworks */,
 			);
 			path = YCKeychainService;
 			sourceTree = "<group>";
@@ -88,6 +92,8 @@
 		C6DEB83B1B3A66C500477ED2 /* YCKeychainServiceTests */ = {
 			isa = PBXGroup;
 			children = (
+				C6DEB84E1B3A6B3500477ED2 /* KeychainStorage */,
+				C6DEB84F1B3A6B4300477ED2 /* KeychainItem */,
 				C6DEB83E1B3A66C500477ED2 /* YCKeychainServiceTests.m */,
 				C6DEB83C1B3A66C500477ED2 /* Supporting Files */,
 			);
@@ -100,6 +106,64 @@
 				C6DEB83D1B3A66C500477ED2 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C6DEB8481B3A6A9100477ED2 /* KeychainStorage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = KeychainStorage;
+			sourceTree = "<group>";
+		};
+		C6DEB8491B3A6AAA00477ED2 /* KeychainItem */ = {
+			isa = PBXGroup;
+			children = (
+				C6DEB84D1B3A6B1C00477ED2 /* InternetKeychainItem */,
+				C6DEB84C1B3A6B0F00477ED2 /* GenericKeychainItem */,
+			);
+			name = KeychainItem;
+			sourceTree = "<group>";
+		};
+		C6DEB84A1B3A6ACB00477ED2 /* Supporting Functions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Supporting Functions";
+			sourceTree = "<group>";
+		};
+		C6DEB84B1B3A6AE700477ED2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C6DEB84C1B3A6B0F00477ED2 /* GenericKeychainItem */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = GenericKeychainItem;
+			sourceTree = "<group>";
+		};
+		C6DEB84D1B3A6B1C00477ED2 /* InternetKeychainItem */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = InternetKeychainItem;
+			sourceTree = "<group>";
+		};
+		C6DEB84E1B3A6B3500477ED2 /* KeychainStorage */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = KeychainStorage;
+			sourceTree = "<group>";
+		};
+		C6DEB84F1B3A6B4300477ED2 /* KeychainItem */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = KeychainItem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
