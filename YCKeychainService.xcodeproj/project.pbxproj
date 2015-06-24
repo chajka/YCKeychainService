@@ -77,8 +77,6 @@
 		C6DEB8221B3A66C500477ED2 = {
 			isa = PBXGroup;
 			children = (
-				C6DEB85D1B3A961300477ED2 /* Security.framework */,
-				C6DEB85B1B3A960600477ED2 /* Foundation.framework */,
 				C6DEB82E1B3A66C500477ED2 /* YCKeychainService */,
 				C6DEB83B1B3A66C500477ED2 /* YCKeychainServiceTests */,
 				C6DEB82D1B3A66C500477ED2 /* Products */,
@@ -168,6 +166,8 @@
 		C6DEB84B1B3A6AE700477ED2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C6DEB85B1B3A960600477ED2 /* Foundation.framework */,
+				C6DEB85D1B3A961300477ED2 /* Security.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

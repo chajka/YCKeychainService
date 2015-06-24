@@ -7,7 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Security/Security.h>
+#import "YCKeychain.h"
 
-@interface YCKeychainItem : NSObject
+@interface YCKeychainItem : NSObject {
+	SecKeychainItemRef						keychainItem;
+	YCKeychain								*belongsToKeychain;
+
+	NSString								*account;
+	NSString								*password;
+
+	OSStatus								lastResult;
+}
+@property (readonly)	NSString			*account;
+@property (readonly)	NSString			*password;
+@property (readonly)	YCKeychain			*inKeyChain;
+
 
 @end
