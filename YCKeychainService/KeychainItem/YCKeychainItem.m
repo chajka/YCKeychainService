@@ -8,6 +8,17 @@
 
 #import "YCKeychainItem.h"
 
+@interface YCKeychainItem ()
+#ifdef __cplusplus
+extern "C" {
+#endif
+CFMutableDictionaryRef makeBaseQuery(CFTypeRef keychainClass);
+#ifdef __cplusplus
+} //end extern "C"
+#endif
+
+@end
+
 @implementation YCKeychainItem
 #pragma mark - synthesize properties
 @synthesize account;
@@ -52,6 +63,22 @@
 }// end - (NSString *)errorMessage
 #pragma mark - private
 #pragma mark - C functions
-
+CFMutableDictionaryRef makeBaseQuery(CFTypeRef keychainClass)
+{		// create query dictionary
+	CFMutableDictionaryRef query = CFDictionaryCreateMutable(kCFAllocatorDefault, 0, &kCFTypeDictionaryKeyCallBacks, &kCFTypeDictionaryValueCallBacks);
+	
+	// set value for query
+	CFDictionaryAddValue(query, kSecClass, keychainClass);
+	CFDictionaryAddValue(query, kSecMatchLimit, kSecMatchLimitAll);
+	CFDictionaryAddValue(query, kSecReturnAttributes, kCFBooleanTrue);
+	CFDictionaryAddValue(query, kSecAttrKeyClass, kSecAttrDescription);
+	CFDictionaryAddValue(query, kSecAttrKeyClass, kSecAttrSecurityDomain);
+	CFDictionaryAddValue(query, kSecAttrKeyClass, kSecAttrProtocol);
+	CFDictionaryAddValue(query, kSecAttrKeyClass, kSecAttrAuthenticationType);
+	CFDictionaryAddValue(query, kSecAttrKeyClass, kSecAttrPort);
+	CFDictionaryAddValue(query, kSecAttrKeyClass, kSecAttrPath);
+	
+	return query;
+}// end CFMutableDictionaryRef makeQuery(CFTypeRef keychainClass)
 
 @end

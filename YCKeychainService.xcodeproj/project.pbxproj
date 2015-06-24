@@ -146,10 +146,10 @@
 		C6DEB8491B3A6AAA00477ED2 /* KeychainItem */ = {
 			isa = PBXGroup;
 			children = (
-				C6DEB84D1B3A6B1C00477ED2 /* InternetKeychainItem */,
-				C6DEB84C1B3A6B0F00477ED2 /* GenericKeychainItem */,
 				C6DEB8691B3AA2F200477ED2 /* YCKeychainItem.h */,
 				C6DEB86A1B3AA2F200477ED2 /* YCKeychainItem.m */,
+				C6DEB84D1B3A6B1C00477ED2 /* InternetKeychainItem */,
+				C6DEB84C1B3A6B0F00477ED2 /* GenericKeychainItem */,
 			);
 			name = KeychainItem;
 			sourceTree = "<group>";
