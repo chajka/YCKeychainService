@@ -18,6 +18,9 @@
 		C6DEB85E1B3A961300477ED2 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DEB85D1B3A961300477ED2 /* Security.framework */; };
 		C6DEB8651B3A96D300477ED2 /* CommonUtilties.h in Headers */ = {isa = PBXBuildFile; fileRef = C6DEB8631B3A96D300477ED2 /* CommonUtilties.h */; };
 		C6DEB8661B3A96D300477ED2 /* CommonUtilties.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DEB8641B3A96D300477ED2 /* CommonUtilties.m */; };
+		C6DEB8681B3A9F8E00477ED2 /* YCKeychainStorageTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DEB8671B3A9F8E00477ED2 /* YCKeychainStorageTest.m */; };
+		C6DEB86B1B3AA2F200477ED2 /* YCKeychainItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C6DEB8691B3AA2F200477ED2 /* YCKeychainItem.h */; };
+		C6DEB86C1B3AA2F200477ED2 /* YCKeychainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DEB86A1B3AA2F200477ED2 /* YCKeychainItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		C6DEB85D1B3A961300477ED2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		C6DEB8631B3A96D300477ED2 /* CommonUtilties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CommonUtilties.h; path = "Supporting Functions/CommonUtilties.h"; sourceTree = "<group>"; };
 		C6DEB8641B3A96D300477ED2 /* CommonUtilties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonUtilties.m; path = "Supporting Functions/CommonUtilties.m"; sourceTree = "<group>"; };
+		C6DEB8671B3A9F8E00477ED2 /* YCKeychainStorageTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCKeychainStorageTest.m; sourceTree = "<group>"; };
+		C6DEB8691B3AA2F200477ED2 /* YCKeychainItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YCKeychainItem.h; path = KeychainItem/YCKeychainItem.h; sourceTree = "<group>"; };
+		C6DEB86A1B3AA2F200477ED2 /* YCKeychainItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YCKeychainItem.m; path = KeychainItem/YCKeychainItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +150,8 @@
 			children = (
 				C6DEB84D1B3A6B1C00477ED2 /* InternetKeychainItem */,
 				C6DEB84C1B3A6B0F00477ED2 /* GenericKeychainItem */,
+				C6DEB8691B3AA2F200477ED2 /* YCKeychainItem.h */,
+				C6DEB86A1B3AA2F200477ED2 /* YCKeychainItem.m */,
 			);
 			name = KeychainItem;
 			sourceTree = "<group>";
@@ -181,6 +189,7 @@
 		C6DEB84E1B3A6B3500477ED2 /* KeychainStorage */ = {
 			isa = PBXGroup;
 			children = (
+				C6DEB8671B3A9F8E00477ED2 /* YCKeychainStorageTest.m */,
 			);
 			name = KeychainStorage;
 			sourceTree = "<group>";
@@ -200,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6DEB8521B3A6DFD00477ED2 /* YCKeychain.h in Headers */,
+				C6DEB86B1B3AA2F200477ED2 /* YCKeychainItem.h in Headers */,
 				C6DEB8561B3A720000477ED2 /* YCKeychainACL.h in Headers */,
 				C6DEB8651B3A96D300477ED2 /* CommonUtilties.h in Headers */,
 				C6DEB8321B3A66C500477ED2 /* YCKeychainService.h in Headers */,
@@ -304,6 +314,7 @@
 			files = (
 				C6DEB8661B3A96D300477ED2 /* CommonUtilties.m in Sources */,
 				C6DEB8571B3A720000477ED2 /* YCKeychainACL.m in Sources */,
+				C6DEB86C1B3AA2F200477ED2 /* YCKeychainItem.m in Sources */,
 				C6DEB8531B3A6DFD00477ED2 /* YCKeychain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6DEB83F1B3A66C500477ED2 /* YCKeychainServiceTests.m in Sources */,
+				C6DEB8681B3A9F8E00477ED2 /* YCKeychainStorageTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
