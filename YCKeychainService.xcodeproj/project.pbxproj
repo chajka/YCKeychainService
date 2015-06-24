@@ -10,6 +10,10 @@
 		C6DEB8321B3A66C500477ED2 /* YCKeychainService.h in Headers */ = {isa = PBXBuildFile; fileRef = C6DEB8311B3A66C500477ED2 /* YCKeychainService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C6DEB8381B3A66C500477ED2 /* YCKeychainService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DEB82C1B3A66C500477ED2 /* YCKeychainService.framework */; };
 		C6DEB83F1B3A66C500477ED2 /* YCKeychainServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DEB83E1B3A66C500477ED2 /* YCKeychainServiceTests.m */; };
+		C6DEB8521B3A6DFD00477ED2 /* YCKeychain.h in Headers */ = {isa = PBXBuildFile; fileRef = C6DEB8501B3A6DFD00477ED2 /* YCKeychain.h */; };
+		C6DEB8531B3A6DFD00477ED2 /* YCKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DEB8511B3A6DFD00477ED2 /* YCKeychain.m */; };
+		C6DEB8561B3A720000477ED2 /* YCKeychainACL.h in Headers */ = {isa = PBXBuildFile; fileRef = C6DEB8541B3A720000477ED2 /* YCKeychainACL.h */; };
+		C6DEB8571B3A720000477ED2 /* YCKeychainACL.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DEB8551B3A720000477ED2 /* YCKeychainACL.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,10 @@
 		C6DEB8371B3A66C500477ED2 /* YCKeychainServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YCKeychainServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6DEB83D1B3A66C500477ED2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6DEB83E1B3A66C500477ED2 /* YCKeychainServiceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YCKeychainServiceTests.m; sourceTree = "<group>"; };
+		C6DEB8501B3A6DFD00477ED2 /* YCKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YCKeychain.h; path = KeychainStorage/YCKeychain.h; sourceTree = "<group>"; };
+		C6DEB8511B3A6DFD00477ED2 /* YCKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YCKeychain.m; path = KeychainStorage/YCKeychain.m; sourceTree = "<group>"; };
+		C6DEB8541B3A720000477ED2 /* YCKeychainACL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YCKeychainACL.h; path = KeychainStorage/YCKeychainACL.h; sourceTree = "<group>"; };
+		C6DEB8551B3A720000477ED2 /* YCKeychainACL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YCKeychainACL.m; path = KeychainStorage/YCKeychainACL.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +119,10 @@
 		C6DEB8481B3A6A9100477ED2 /* KeychainStorage */ = {
 			isa = PBXGroup;
 			children = (
+				C6DEB8541B3A720000477ED2 /* YCKeychainACL.h */,
+				C6DEB8551B3A720000477ED2 /* YCKeychainACL.m */,
+				C6DEB8501B3A6DFD00477ED2 /* YCKeychain.h */,
+				C6DEB8511B3A6DFD00477ED2 /* YCKeychain.m */,
 			);
 			name = KeychainStorage;
 			sourceTree = "<group>";
@@ -173,6 +185,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6DEB8521B3A6DFD00477ED2 /* YCKeychain.h in Headers */,
+				C6DEB8561B3A720000477ED2 /* YCKeychainACL.h in Headers */,
 				C6DEB8321B3A66C500477ED2 /* YCKeychainService.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +287,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6DEB8571B3A720000477ED2 /* YCKeychainACL.m in Sources */,
+				C6DEB8531B3A6DFD00477ED2 /* YCKeychain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
