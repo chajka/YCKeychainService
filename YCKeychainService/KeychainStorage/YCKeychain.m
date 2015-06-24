@@ -112,6 +112,68 @@ extern "C" {
 #pragma mark - properties
 #pragma mark - actions
 #pragma mark - messages
+- (BOOL) lock
+{
+	BOOL success = YES;
+	lastResult = SecKeychainLock(keychain);
+	
+	// error handling
+	if (lastResult != noErr)
+		success = NO;
+	
+	return success;
+}// end - (BOOL) lock
+
+- (BOOL) unlock:(NSString *)password
+{
+	BOOL success = YES;
+	UInt32 length = 0;
+	const char *pass = NULL;
+	Boolean usePassword = false;
+	
+	if (password != nil) {
+		length = (UInt32)[password length];
+		pass = [password UTF8String];
+		usePassword = true;
+	}// end if password is defined
+	lastResult = SecKeychainUnlock(keychain, length, pass, usePassword);
+	
+	// error handling
+	if (lastResult != noErr)
+		success = NO;
+	// end if remove keychain is success or not
+	
+	return success;
+}// end - (BOOL) unlock:(NSString *)password error:(NSString **)errorMessage
+
+- (BOOL) remove
+{		// check target keychain is not login keychain
+	if (keychain == NULL)
+		return NO;
+	// end if try remove default keychain
+	
+	BOOL success = YES;
+	lastResult = SecKeychainDelete(keychain);
+	
+	// error handling
+	if (lastResult == noErr)
+		keychain = NULL;
+	else
+		success = NO;
+	// end if error
+	
+	return success;
+}// end - (BOOL) remove:(NSString **)errorMessage
+
+- (OSStatus) lastStatus
+{
+	return lastResult;
+}// end - (OSStatus) lastStatus
+
+- (NSString *)errorMessage
+{
+	return errorMessageFromStatus(lastResult);
+}// end - (NSString *)errorMessage
 #pragma mark - private
 #pragma mark - C functions
 static

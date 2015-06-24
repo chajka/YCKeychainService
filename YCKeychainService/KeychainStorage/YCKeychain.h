@@ -35,4 +35,9 @@
 - (id) init;
 - (id) initWithPath:(NSString *)path password:(NSString *)password;
 
+- (BOOL) lock;
+- (BOOL) unlock:(NSString *)password;
+- (BOOL) remove;
+- (OSStatus) lastStatus;
+- (NSString *) errorMessage;
 @end
