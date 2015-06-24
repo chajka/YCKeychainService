@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <Security/Security.h>
 #import "YCKeychainACL.h"
+#import "CommonUtilties.h"
 
 @interface YCKeychain : NSObject {
 	SecKeychainRef						keychain;
@@ -18,4 +19,7 @@
 	NSString							*lastResultMessage;
 }
 @property (readonly) SecKeychainRef		keychain;
+- (id) init;
+- (id) initWithPath:(NSString *)path password:(NSString *)password;
+
 @end
