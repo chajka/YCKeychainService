@@ -32,7 +32,7 @@ enum {
 	kYCPortDAAP			= 3689
 };
 
-@interface YCInternetKeychainItem : NSObject {
+@interface YCInternetKeychainItem : YCKeychainItem {
 	NSURL									*url;
 	NSString								*securityDomain;
 	UInt16									port;
