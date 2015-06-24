@@ -41,6 +41,15 @@
 #pragma mark - properties
 #pragma mark - actions
 #pragma mark - messages
+- (BOOL) addTo:(YCKeychain *)keychain
+{
+	return NO;
+}// end - (BOOL) addTo:(YCKeychain *)keychain
+
+- (NSString *)errorMessage
+{
+	return errorMessageFromStatus(lastResult);
+}// end - (NSString *)errorMessage
 #pragma mark - private
 #pragma mark - C functions
 
