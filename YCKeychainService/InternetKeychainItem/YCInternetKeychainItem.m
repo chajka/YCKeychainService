@@ -25,7 +25,6 @@ extern "C" {
 #pragma mark - synthesize properties
 @synthesize url;
 @synthesize securityDomain;
-@synthesize port;
 @synthesize protocol;
 @synthesize authenticationType;
 #pragma mark - class method
@@ -50,6 +49,20 @@ extern "C" {
 #pragma mark - override
 #pragma mark - delegate
 #pragma mark - properties
+- (NSString *) server
+{
+	return [url host];
+}// end - (NSString *) server
+
+- (NSString *) path
+{
+	return [url path];
+}// end - (NSString *) path
+
+- (NSUInteger) port
+{
+	return [[url port] integerValue];
+}//end - (NSUInteger) port
 #pragma mark - actions
 #pragma mark - messages
 - (void) setURL:(NSURL *)aURL
@@ -66,7 +79,6 @@ extern "C" {
 {
 	url = [[NSURL alloc] initWithString:[aURL absoluteString]];
 	securityDomain = [[NSString alloc] initWithString:domain];
-	port = aPort;
 	protocol = aProtocol;
 	authenticationType = auth;
 	

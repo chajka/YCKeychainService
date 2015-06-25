@@ -10,5 +10,9 @@
 #import "YCKeychainItem.h"
 
 @interface YCHTTPSKeychainItem : YCInternetKeychainItem
-+ (NSArray *) usersInKeychain:(NSString *)url andPath:(NSString *)path;
++ (NSArray *) usersInKeychain:(NSURL *)url;
++ (YCHTTPSKeychainItem *) userInKeychain:(NSString *)account forURL:(NSURL *)url;
+- (id) initWithURL:(NSURL *)aURL andSecItem:(NSDictionary *)item;
+- (id) initWithAccount:(NSString *)acct andPassword:(NSString *)pass forURL:(NSURL *)aURL;
+- (BOOL) deleteFromKeychain;
 @end
