@@ -60,10 +60,8 @@ CFMutableDictionaryRef makeHTTPSPasswordQuery(CFStringRef url, CFStringRef path)
 	OSStatus status;
 	
 	status = SecItemCopyMatching(query, (CFTypeRef*)&searchResult);
-	if (status != noErr) {
-		NSLog(@"Error : %@", errorMessageFromStatus(status));
+	if (status != noErr)
 		return nil;
-	}
 
 	YCHTTPSKeychainItem *user = [[YCHTTPSKeychainItem alloc] initWithURL:url andSecItem:[(__bridge NSArray *)searchResult objectAtIndex:0]];
 
