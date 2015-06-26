@@ -14,6 +14,11 @@ FOUNDATION_EXPORT double YCKeychainServiceVersionNumber;
 //! Project version string for YCKeychainService.
 FOUNDATION_EXPORT const unsigned char YCKeychainServiceVersionString[];
 
-// In this header, you should import all the public headers of your framework using statements like #import <YCKeychainService/PublicHeader.h>
+#import	"YCKeychainACL.h"
+#import "YCKeychain.h"
+#import "YCKeychainItem.h"
 
+#import "YCGenericKeychainItem.h"
 
+#import "YCInternetKeychainItem.h"
+#import "YCHTTPSKeychainItem.h"

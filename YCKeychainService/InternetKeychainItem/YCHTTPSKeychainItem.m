@@ -129,12 +129,6 @@ CFMutableDictionaryRef makeHTTPSPasswordQuery(CFStringRef url, CFStringRef path)
 #pragma mark - properties
 #pragma mark - actions
 #pragma mark - messages
-- (BOOL) deleteFromKeychain
-{
-	OSStatus status = SecKeychainItemDelete(keychainItem);
-
-	return (status == noErr) ? YES : NO;
-}// - (BOOL) deleteFromKeychain
 #pragma mark - private
 #pragma mark - C functions
 CFMutableDictionaryRef makeHTTPSPasswordQuery(CFStringRef url, CFStringRef path)
