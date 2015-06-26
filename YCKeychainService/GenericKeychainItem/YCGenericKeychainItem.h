@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "YCKeychainItem.h"
 
-@interface YCGenericKeychainItem : NSObject
+@interface YCGenericKeychainItem : YCKeychainItem {
+	NSString						*serviceName;
+}
 
 @end
