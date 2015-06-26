@@ -12,5 +12,6 @@
 @interface YCGenericKeychainItem : YCKeychainItem {
 	NSString						*serviceName;
 }
-
+- (id) initWithName:(NSString *)accnt forService:(NSString *)service;
+- (id) initWithName:(NSString *)accnt password:(NSString *)passwd  forService:(NSString *)service;
 @end

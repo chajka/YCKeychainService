@@ -57,6 +57,16 @@ CFMutableDictionaryRef makeBaseQuery(CFTypeRef keychainClass);
 	return NO;
 }// end - (BOOL) addTo:(YCKeychain *)keychain
 
+- (BOOL) deleteFromKeychain
+{
+	if (keychainItem == NULL)
+		return NO;
+
+	OSStatus status = SecKeychainItemDelete(keychainItem);
+	
+	return (status == noErr) ? YES : NO;
+}// - (BOOL) deleteFromKeychain
+
 - (NSString *)errorMessage
 {
 	return errorMessageFromStatus(lastResult);
