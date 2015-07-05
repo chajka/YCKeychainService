@@ -257,14 +257,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6DEB8521B3A6DFD00477ED2 /* YCKeychain.h in Headers */,
-				C6DEB86B1B3AA2F200477ED2 /* YCKeychainItem.h in Headers */,
+				C6DEB8321B3A66C500477ED2 /* YCKeychainService.h in Headers */,
 				C6DEB8561B3A720000477ED2 /* YCKeychainACL.h in Headers */,
+				C6DEB8521B3A6DFD00477ED2 /* YCKeychain.h in Headers */,
+				C6DEB8801B3AB8D200477ED2 /* YCHTTPSKeychainItem.h in Headers */,
+				C6DEB86F1B3AAEB100477ED2 /* YCInternetKeychainItem.h in Headers */,
+				C6DEB86B1B3AA2F200477ED2 /* YCKeychainItem.h in Headers */,
 				C6ABD97E1B3D19EF006062FB /* YCGenericKeychainItem.h in Headers */,
 				C6DEB8651B3A96D300477ED2 /* CommonUtilties.h in Headers */,
-				C6DEB86F1B3AAEB100477ED2 /* YCInternetKeychainItem.h in Headers */,
-				C6DEB8801B3AB8D200477ED2 /* YCHTTPSKeychainItem.h in Headers */,
-				C6DEB8321B3A66C500477ED2 /* YCKeychainService.h in Headers */,
 				C6DEB8771B3AB20700477ED2 /* YCKeychainItem+private.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
