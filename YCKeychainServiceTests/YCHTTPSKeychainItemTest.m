@@ -28,8 +28,14 @@
 
 - (void) test01_Allocation
 {
-	NSArray *users = [YCHTTPSKeychainItem usersInKeychain:@"secure.nicovideo.jp" andPath:@"/secure/login_form"];
+	YCHTTPSKeychainItem *new = [[YCHTTPSKeychainItem alloc] initWithAccount:@"sobranie@mac.com" andPassword:@"testPassword" forURL:[NSURL URLWithString:@"https://secure.nicovideo.jp/secure/login_form"]];
+	XCTAssertNotNil(new, @"Test01 allocation fail\"%s\"", __PRETTY_FUNCTION__);
+	NSArray *users = [YCHTTPSKeychainItem usersInKeychain:[NSURL URLWithString:@"https://secure.nicovideo.jp/secure/login_form"]];
 	XCTAssertNotNil(users, @"Test01 allocation fail\"%s\"", __PRETTY_FUNCTION__);
+	YCHTTPSKeychainItem *user = [YCHTTPSKeychainItem userInKeychain:@"sobranie@mac.com" forURL:[NSURL URLWithString:@"https://secure.nicovideo.jp/secure/login_form"]];
+	XCTAssertNotNil(user, @"Test01 allocation fail\"%s\"", __PRETTY_FUNCTION__);
+	BOOL success = [new deleteFromKeychain];
+	XCTAssertTrue(success);
 }
 
 @end

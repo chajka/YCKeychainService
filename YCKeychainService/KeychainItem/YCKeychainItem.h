@@ -27,5 +27,6 @@
 - (id) initWithName:(NSString *)accountName password:(NSString *)accountPassword;
 
 - (BOOL) addTo:(YCKeychain *)keychain;
+- (BOOL) deleteFromKeychain;
 - (NSString *)errorMessage;
 @end

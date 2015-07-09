@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C6ABD97E1B3D19EF006062FB /* YCGenericKeychainItem.h in Headers */ = {isa = PBXBuildFile; fileRef = C6ABD97C1B3D19EF006062FB /* YCGenericKeychainItem.h */; };
+		C6ABD97F1B3D19EF006062FB /* YCGenericKeychainItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C6ABD97D1B3D19EF006062FB /* YCGenericKeychainItem.m */; };
+		C6ABD9821B3D2DB2006062FB /* YCGenericKeychainItemTest.m in Sources */ = {isa = PBXBuildFile; fileRef = C6ABD9811B3D2DB2006062FB /* YCGenericKeychainItemTest.m */; };
 		C6DEB8321B3A66C500477ED2 /* YCKeychainService.h in Headers */ = {isa = PBXBuildFile; fileRef = C6DEB8311B3A66C500477ED2 /* YCKeychainService.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C6DEB8381B3A66C500477ED2 /* YCKeychainService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6DEB82C1B3A66C500477ED2 /* YCKeychainService.framework */; };
 		C6DEB83F1B3A66C500477ED2 /* YCKeychainServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C6DEB83E1B3A66C500477ED2 /* YCKeychainServiceTests.m */; };
@@ -42,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C6ABD97C1B3D19EF006062FB /* YCGenericKeychainItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = YCGenericKeychainItem.h; path = GenericKeychainItem/YCGenericKeychainItem.h; sourceTree = "<group>"; };
+		C6ABD97D1B3D19EF006062FB /* YCGenericKeychainItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = YCGenericKeychainItem.m; path = GenericKeychainItem/YCGenericKeychainItem.m; sourceTree = "<group>"; };
+		C6ABD9811B3D2DB2006062FB /* YCGenericKeychainItemTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YCGenericKeychainItemTest.m; sourceTree = "<group>"; };
 		C6DEB82C1B3A66C500477ED2 /* YCKeychainService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = YCKeychainService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6DEB8301B3A66C500477ED2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6DEB8311B3A66C500477ED2 /* YCKeychainService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YCKeychainService.h; sourceTree = "<group>"; };
@@ -90,6 +96,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C6ABD9801B3D2D87006062FB /* GenericKeychain */ = {
+			isa = PBXGroup;
+			children = (
+				C6ABD9811B3D2DB2006062FB /* YCGenericKeychainItemTest.m */,
+			);
+			name = GenericKeychain;
+			sourceTree = "<group>";
+		};
 		C6DEB8221B3A66C500477ED2 = {
 			isa = PBXGroup;
 			children = (
@@ -193,6 +207,8 @@
 		C6DEB84C1B3A6B0F00477ED2 /* GenericKeychainItem */ = {
 			isa = PBXGroup;
 			children = (
+				C6ABD97C1B3D19EF006062FB /* YCGenericKeychainItem.h */,
+				C6ABD97D1B3D19EF006062FB /* YCGenericKeychainItem.m */,
 			);
 			name = GenericKeychainItem;
 			sourceTree = "<group>";
@@ -219,6 +235,7 @@
 		C6DEB84F1B3A6B4300477ED2 /* KeychainItem */ = {
 			isa = PBXGroup;
 			children = (
+				C6ABD9801B3D2D87006062FB /* GenericKeychain */,
 				C6DEB8791B3AB46500477ED2 /* InternetKeychainItem */,
 			);
 			name = KeychainItem;
@@ -240,13 +257,14 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6DEB8521B3A6DFD00477ED2 /* YCKeychain.h in Headers */,
-				C6DEB86B1B3AA2F200477ED2 /* YCKeychainItem.h in Headers */,
-				C6DEB8561B3A720000477ED2 /* YCKeychainACL.h in Headers */,
-				C6DEB8651B3A96D300477ED2 /* CommonUtilties.h in Headers */,
-				C6DEB86F1B3AAEB100477ED2 /* YCInternetKeychainItem.h in Headers */,
-				C6DEB8801B3AB8D200477ED2 /* YCHTTPSKeychainItem.h in Headers */,
 				C6DEB8321B3A66C500477ED2 /* YCKeychainService.h in Headers */,
+				C6DEB8561B3A720000477ED2 /* YCKeychainACL.h in Headers */,
+				C6DEB8521B3A6DFD00477ED2 /* YCKeychain.h in Headers */,
+				C6DEB8801B3AB8D200477ED2 /* YCHTTPSKeychainItem.h in Headers */,
+				C6DEB86F1B3AAEB100477ED2 /* YCInternetKeychainItem.h in Headers */,
+				C6DEB86B1B3AA2F200477ED2 /* YCKeychainItem.h in Headers */,
+				C6ABD97E1B3D19EF006062FB /* YCGenericKeychainItem.h in Headers */,
+				C6DEB8651B3A96D300477ED2 /* CommonUtilties.h in Headers */,
 				C6DEB8771B3AB20700477ED2 /* YCKeychainItem+private.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,6 +371,7 @@
 				C6DEB86C1B3AA2F200477ED2 /* YCKeychainItem.m in Sources */,
 				C6DEB8811B3AB8D200477ED2 /* YCHTTPSKeychainItem.m in Sources */,
 				C6DEB8781B3AB20700477ED2 /* YCKeychainItem+private.m in Sources */,
+				C6ABD97F1B3D19EF006062FB /* YCGenericKeychainItem.m in Sources */,
 				C6DEB8531B3A6DFD00477ED2 /* YCKeychain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -363,6 +382,7 @@
 			files = (
 				C6DEB83F1B3A66C500477ED2 /* YCKeychainServiceTests.m in Sources */,
 				C6DEB8681B3A9F8E00477ED2 /* YCKeychainStorageTest.m in Sources */,
+				C6ABD9821B3D2DB2006062FB /* YCGenericKeychainItemTest.m in Sources */,
 				C6DEB8831B3ABBD400477ED2 /* YCHTTPSKeychainItemTest.m in Sources */,
 				C6DEB87D1B3AB4B400477ED2 /* YCInternetKeychainItemTest.m in Sources */,
 			);
@@ -469,11 +489,12 @@
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				DYLIB_INSTALL_NAME_BASE = "$(INSTALL_PATH)";
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = YCKeychainService/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				INSTALL_PATH = "@executable_path/../Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -486,11 +507,12 @@
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				DYLIB_INSTALL_NAME_BASE = "$(INSTALL_PATH)";
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = YCKeychainService/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				INSTALL_PATH = "@executable_path/../Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -547,6 +569,7 @@
 				C6DEB8441B3A66C500477ED2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C6DEB8451B3A66C500477ED2 /* Build configuration list for PBXNativeTarget "YCKeychainServiceTests" */ = {
 			isa = XCConfigurationList;
@@ -555,6 +578,7 @@
 				C6DEB8471B3A66C500477ED2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
